@@ -30,4 +30,8 @@ public class Monitoria extends Projeto{
 		this.disciplina = disciplina;
 	}
 
+	public int getexpectativa(){
+		return expectativa;
+	}
+	
 }
