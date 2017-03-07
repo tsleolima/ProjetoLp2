@@ -5,7 +5,7 @@ import java.util.List;
 
 import Pessoa.Pessoa;
 
-public class Facade {
+public class CentralProjeto {
 		
 		List<Pessoa> pessoas = new ArrayList<>();
 		

@@ -1,5 +1,10 @@
 package Projeto;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import Despesas.Despesa;
+
 public class Projeto {
 	
 	private String nome;
@@ -8,6 +13,8 @@ public class Projeto {
 	private int duracao;
 	private int codigo;
 	private int custoTotal;
+	
+	private List<Despesa> despesas;
 	
 	
 	public Projeto(String nome,String objetivo,int dataInicio,int duracao,int custoTotal,int codigo) throws Exception{
@@ -32,6 +39,7 @@ public class Projeto {
 		this.duracao = duracao;
 		this.custoTotal = custoTotal;
 		this.codigo = codigo;
+		despesas = new ArrayList<Despesa>();
 	}
 
 

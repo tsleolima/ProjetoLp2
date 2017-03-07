@@ -5,7 +5,7 @@ public class Monitoria extends Projeto{
 	private String anoLetivo;
 	private String disciplina;
 	private int expectativa;
-	
+		
 	public Monitoria(String nome, String objetivo, int dataInicio, int duracao, int custoTotal, int codigo,String anoLetivo,String disciplina,int expectativa)
 			throws Exception {
 		super(nome, objetivo, 	dataInicio, duracao, custoTotal, codigo);
@@ -32,6 +32,5 @@ public class Monitoria extends Projeto{
 
 	public int getexpectativa(){
 		return expectativa;
-	}
-	
+	}	
 }
