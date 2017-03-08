@@ -8,22 +8,28 @@ public class CentralProjeto {
 
 	private ArrayList<Pessoa> pessoas;
 
-	public String cadastraPessoa(String cpf, String nome, String email){
+	public String cadastraPessoa(String cpf, String nome, String email)throws Exception{
+		Pessoa p = buscaPessoa(cpf);
+		if (p != null){
+			throw new Exception("Erro no cadastro de pessoa: Pessoa com mesmo CPF ja cadastrada");
+		}
 		Pessoa pessoa = new Pessoa(nome, email, cpf);
 		pessoas.add(pessoa);
 		return cpf;
 	}
 	
+	public void imprime(String cpf){
+		System.out.println(cpf);
+	}
 
 	public String getInfoPessoa(String cpf, String atributo) throws Exception {
 		Pessoa pessoa = buscaPessoa(cpf);
-		if (pessoa == null) {
+		if (pessoa == null){
 			throw new Exception("Erro na consulta de pessoa: Pessoa nao encontrada");
 		}
 
 		if (atributo.equalsIgnoreCase("Nome")) {
 			String nome = pessoa.getNome();
-			System.out.println(nome);
 			return nome; 
 		}
 
@@ -33,7 +39,7 @@ public class CentralProjeto {
 			throw new Exception("Erro na atualizacao de pessoa: Atributo inexistente");
 		} 
 	}
-
+	
 	private Pessoa buscaPessoa(String cpf){
 		for (Pessoa i:pessoas){
 			if (i.getCpf().equals(cpf)){
@@ -52,9 +58,10 @@ public class CentralProjeto {
 
 	public void listarPessoas() {
 		for (int i = 0; i < pessoas.size(); i++) {
-			System.out.println(pessoas.get(i).getNome());
-			System.out.println(pessoas.get(i).getEmail());
-			System.out.println(pessoas.get(i).getCpf());
+//			System.out.println(pessoas.get(i).getNome());
+//			System.out.println(pessoas.get(i).getEmail());
+//			System.out.println(pessoas.get(i).getCpf());
+			System.out.println(pessoas.get(i));
 		}
 	}
 

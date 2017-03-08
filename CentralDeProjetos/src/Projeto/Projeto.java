@@ -18,20 +18,20 @@ public class Projeto {
 	
 	
 	public Projeto(String nome,String objetivo,int dataInicio,int duracao,int custoTotal,int codigo) throws Exception{
-		if (nome.equals(" ".trim()) || nome == null){
-			throw new Exception("O nome não pode ser nulo ou vazio.");
+		if (nome.equalsIgnoreCase(" ") || nome == null){
+			throw new Exception("O nome nï¿½o pode ser nulo ou vazio.");
 		}
-		if (objetivo.equals(" ".trim()) || nome == null){
-			throw new Exception("O objetivo não pode ser nulo ou vazio.");
+		if (objetivo.equalsIgnoreCase(" ") || nome == null){
+			throw new Exception("O objetivo nï¿½o pode ser nulo ou vazio.");
 		}
 		if (dataInicio < 0){
-			throw new Exception("A data de Inicio não pode ser negativa.");
+			throw new Exception("A data de Inicio nï¿½o pode ser negativa.");
 		}
 		if (duracao < 0){
-			throw new Exception("A duração não pode ser negativa.");
+			throw new Exception("A duraï¿½ï¿½o nï¿½o pode ser negativa.");
 		}
 		if (custoTotal < 0){
-			throw new Exception("O custo Total não pode ser negativa.");
+			throw new Exception("O custo Total nï¿½o pode ser negativa.");
 		}
 		this.nome = nome;
 		this.objetivo = objetivo;

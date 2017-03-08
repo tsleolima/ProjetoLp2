@@ -35,5 +35,7 @@ public class Pessoa {
 	@Override
 	public String toString() {
 		return "<<<Nome>>> ; " + nome + "\n<<<Email>>> ; " + email + "\n<<<CPF>>> ; " + cpf;
-	}	
+	}
+	
+	
 }

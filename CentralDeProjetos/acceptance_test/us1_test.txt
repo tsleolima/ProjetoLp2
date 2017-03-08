@@ -36,4 +36,7 @@ expectError "Erro na consulta de pessoa: Pessoa nao encontrada" getInfoPessoa cp
 
 cadastraPessoa cpf=${cpf3} nome="Arianny Farias" email="arizinha_cc@yahoo.com.br"
 
+imprime cpf=${cpf1}
+
+
 fechaSistema
