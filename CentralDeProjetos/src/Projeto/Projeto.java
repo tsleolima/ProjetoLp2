@@ -96,4 +96,57 @@ public class Projeto {
 	public int getDataInicio() {
 		return dataInicio;
 	}
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + codigo;
+		result = prime * result + custoTotal;
+		result = prime * result + dataInicio;
+		result = prime * result + ((despesas == null) ? 0 : despesas.hashCode());
+		result = prime * result + duracao;
+		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
+		result = prime * result + ((objetivo == null) ? 0 : objetivo.hashCode());
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Projeto other = (Projeto) obj;
+		if (codigo != other.codigo)
+			return false;
+		if (custoTotal != other.custoTotal)
+			return false;
+		if (dataInicio != other.dataInicio)
+			return false;
+		if (despesas == null) {
+			if (other.despesas != null)
+				return false;
+		} else if (!despesas.equals(other.despesas))
+			return false;
+		if (duracao != other.duracao)
+			return false;
+		if (nome == null) {
+			if (other.nome != null)
+				return false;
+		} else if (!nome.equals(other.nome))
+			return false;
+		if (objetivo == null) {
+			if (other.objetivo != null)
+				return false;
+		} else if (!objetivo.equals(other.objetivo))
+			return false;
+		return true;
+	}
+	
+	
 }
